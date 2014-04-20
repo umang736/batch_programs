@@ -1,0 +1,8 @@
+move /y  file1 file2-----moves fie1 to file2   /y---to remove permissions in case of overwriting
+copy /y file1 file2------copies file1 to file2
+type file1----outputs file1 to screen
+type file1>file2-----copies file1 to file2 in case copy doesn't work ,it will work 
+erase file1 file2 file3----deletes one or more file
+del file1 file2 file3-----deletes one or more file
+echo. 2>file1----creates a new file with filename file1
+copy /y NUL file1 >NUL--------creates a new file with filename file1

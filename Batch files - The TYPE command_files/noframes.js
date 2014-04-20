@@ -1,0 +1,2 @@
+// Source: http://www.mediacollege.com/internet/javascript/frame/breakout.html
+if (self != top) {if (document.images) {top.location.replace(window.location.href);} else {top.location.href=window.location.href;}}

@@ -1,0 +1,534 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7;FF=3;OtherUA=4">
+<meta name="robots" content="index,follow">
+<meta name="generator" content="phpDesigner and File Commander/W">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script src="Batch%20files%20-%20The%20TYPE%20command_files/ga.js" async="" type="text/javascript"></script><script src="Batch%20files%20-%20The%20TYPE%20command_files/noframes.js" type="text/javascript"></script>
+<link href="Batch%20files%20-%20The%20TYPE%20command_files/default.css" type="text/css" rel="stylesheet">
+<link href="Batch%20files%20-%20The%20TYPE%20command_files/menu.css" type="text/css" rel="stylesheet">
+<script src="Batch%20files%20-%20The%20TYPE%20command_files/menu.js" type="text/javascript"></script>
+<script src="Batch%20files%20-%20The%20TYPE%20command_files/menu_items.js" type="text/javascript"></script>
+<script src="Batch%20files%20-%20The%20TYPE%20command_files/menu_tpl.js" type="text/javascript"></script>
+<script src="Batch%20files%20-%20The%20TYPE%20command_files/myscriptfunctions.js" type="text/javascript"></script>
+<link rel="Home" href="http://www.robvanderwoude.com/"> 
+<link rel="Contents" href="http://www.robvanderwoude.com/"> 
+<link rel="Search" href="http://www.robvanderwoude.com/search.php"> 
+<link rel="Index" href="http://www.robvanderwoude.com/"> 
+<link rel="Help" href="http://www.robvanderwoude.com/faq.php"> 
+<link rel="Author" href="http://www.robvanderwoude.com/contact.php">
+<title>Batch files - The TYPE command</title>
+<meta name="description" content="The TYPE command, and how to use it to convert ASCII to Unicode vv">
+<meta name="keywords" content="type, type command, convert, ascii, ASCII, ansi, ANSI, text, ansi text, unicode, Unicode, ascii to unicode, unicode to ascii">
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-20832463-1']);
+_gaq.push(['_gat._anonymizeIp']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</head>
+<body>
+
+<div class="DontPrint">
+
+<script type="text/javascript">
+new menu (MENU_ITEMS, MENU_TPL);
+</script><a id="e0_0o" class="TM0o0" href="http://www.robvanderwoude.com/" target="_top" style="position: absolute; top: 10px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(0);" onmouseout="TMA[0].onmouseout(0);" onmouseover="TMA[0].onmouseover(0);" onmousedown="TMA[0].onmousedown(0);"><div id="e0_0i" class="TM0i0">Home</div></a>
+<a id="e0_1o" class="TM0o0" href="http://www.robvanderwoude.com/objective.php" target="_top" style="position: absolute; top: 14px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(1);" onmouseout="TMA[0].onmouseout(1);" onmouseover="TMA[0].onmouseover(1);" onmousedown="TMA[0].onmousedown(1);"><div id="e0_1i" class="TM0i0">Objective</div></a>
+<a id="e0_2o" class="TM0o0" href="http://www.robvanderwoude.com/news.php" target="_top" style="position: absolute; top: 38px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(2);" onmouseout="TMA[0].onmouseout(2);" onmouseover="TMA[0].onmouseover(2);" onmousedown="TMA[0].onmousedown(2);"><div id="e0_2i" class="TM0i0">News</div></a>
+<a id="e0_3o" class="TM0o0" href="http://www.robvanderwoude.com/faq.php" target="_top" style="position: absolute; top: 62px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(3);" onmouseout="TMA[0].onmouseout(3);" onmouseover="TMA[0].onmouseover(3);" onmousedown="TMA[0].onmousedown(3);"><div id="e0_3i" class="TM0i0">FAQ</div></a>
+<a id="e0_4o" class="TM0o0" href="http://www.robvanderwoude.com/sitepolicy.php" target="_top" style="position: absolute; top: 86px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(4);" onmouseout="TMA[0].onmouseout(4);" onmouseover="TMA[0].onmouseover(4);" onmousedown="TMA[0].onmousedown(4);"><div id="e0_4i" class="TM0i0">Site Policy</div></a>
+<a id="e0_5o" class="TM0o0" href="http://www.robvanderwoude.com/credits.php" target="_top" style="position: absolute; top: 110px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(5);" onmouseout="TMA[0].onmouseout(5);" onmouseover="TMA[0].onmouseover(5);" onmousedown="TMA[0].onmousedown(5);"><div id="e0_5i" class="TM0i0">Credits</div></a>
+<a id="e0_6o" class="TM0o0" href="http://www.robvanderwoude.com/themakingof.php" target="_top" style="position: absolute; top: 134px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(6);" onmouseout="TMA[0].onmouseout(6);" onmouseover="TMA[0].onmouseover(6);" onmousedown="TMA[0].onmousedown(6);"><div id="e0_6i" class="TM0i0">The Making Of...</div></a>
+<a id="e0_7o" class="TM0o0" href="http://www.robvanderwoude.com/contact.php" target="_top" style="position: absolute; top: 158px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(7);" onmouseout="TMA[0].onmouseout(7);" onmouseover="TMA[0].onmouseover(7);" onmousedown="TMA[0].onmousedown(7);"><div id="e0_7i" class="TM0i0">Contact</div></a>
+<a id="e0_8o" class="TM0o0" href="http://www.robvanderwoude.com/donate.php" target="_top" style="position: absolute; top: 182px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(8);" onmouseout="TMA[0].onmouseout(8);" onmouseover="TMA[0].onmouseover(8);" onmousedown="TMA[0].onmousedown(8);"><div id="e0_8i" class="TM0i0">Donate</div></a>
+<a id="e0_9o" class="TM0o0" href="http://www.robvanderwoude.com/batchfiles.php" target="_top" style="position: absolute; top: 34px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(9);" onmouseout="TMA[0].onmouseout(9);" onmouseover="TMA[0].onmouseover(9);" onmousedown="TMA[0].onmousedown(9);"><div id="e0_9i" class="TM0i0">Batch Files</div></a>
+<a id="e0_10o" class="TM0o0" href="http://www.robvanderwoude.com/batchstart.php" target="_top" style="position: absolute; top: 38px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(10);" onmouseout="TMA[0].onmouseout(10);" onmouseover="TMA[0].onmouseover(10);" onmousedown="TMA[0].onmousedown(10);"><div id="e0_10i" class="TM0i0">Getting Started</div></a>
+<a id="e0_11o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php" target="_top" style="position: absolute; top: 62px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(11);" onmouseout="TMA[0].onmouseout(11);" onmouseover="TMA[0].onmouseover(11);" onmousedown="TMA[0].onmousedown(11);"><div id="e0_11i" class="TM0i0">Batch Techniques</div></a>
+<a id="e0_12o" class="TM0o0" href="http://www.robvanderwoude.com/battech_debugging.php" target="_top" style="position: absolute; top: 66px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(12);" onmouseout="TMA[0].onmouseout(12);" onmouseover="TMA[0].onmouseover(12);" onmousedown="TMA[0].onmousedown(12);"><div id="e0_12i" class="TM0i0">Debugging</div></a>
+<a id="e0_13o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Data" target="_top" style="position: absolute; top: 90px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(13);" onmouseout="TMA[0].onmouseout(13);" onmouseover="TMA[0].onmouseover(13);" onmousedown="TMA[0].onmousedown(13);"><div id="e0_13i" class="TM0i0">Data &amp; Variables</div></a>
+<a id="e0_14o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Devices" target="_top" style="position: absolute; top: 114px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(14);" onmouseout="TMA[0].onmouseout(14);" onmouseover="TMA[0].onmouseover(14);" onmousedown="TMA[0].onmousedown(14);"><div id="e0_14i" class="TM0i0">Devices</div></a>
+<a id="e0_15o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Files" target="_top" style="position: absolute; top: 138px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(15);" onmouseout="TMA[0].onmouseout(15);" onmouseover="TMA[0].onmouseover(15);" onmousedown="TMA[0].onmousedown(15);"><div id="e0_15i" class="TM0i0">Files</div></a>
+<a id="e0_16o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Folders" target="_top" style="position: absolute; top: 162px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(16);" onmouseout="TMA[0].onmouseout(16);" onmouseover="TMA[0].onmouseover(16);" onmousedown="TMA[0].onmousedown(16);"><div id="e0_16i" class="TM0i0">Folders</div></a>
+<a id="e0_17o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Internet" target="_top" style="position: absolute; top: 186px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(17);" onmouseout="TMA[0].onmouseout(17);" onmouseover="TMA[0].onmouseover(17);" onmousedown="TMA[0].onmousedown(17);"><div id="e0_17i" class="TM0i0">Internet</div></a>
+<a id="e0_18o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Inventory" target="_top" style="position: absolute; top: 210px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(18);" onmouseout="TMA[0].onmouseout(18);" onmouseover="TMA[0].onmouseover(18);" onmousedown="TMA[0].onmousedown(18);"><div id="e0_18i" class="TM0i0">Inventory</div></a>
+<a id="e0_19o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Math" target="_top" style="position: absolute; top: 234px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(19);" onmouseout="TMA[0].onmouseout(19);" onmouseover="TMA[0].onmouseover(19);" onmousedown="TMA[0].onmousedown(19);"><div id="e0_19i" class="TM0i0">Math</div></a>
+<a id="e0_20o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Misc" target="_top" style="position: absolute; top: 258px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(20);" onmouseout="TMA[0].onmouseout(20);" onmouseover="TMA[0].onmouseover(20);" onmousedown="TMA[0].onmousedown(20);"><div id="e0_20i" class="TM0i0">Miscellaneous</div></a>
+<a id="e0_21o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Network" target="_top" style="position: absolute; top: 282px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(21);" onmouseout="TMA[0].onmouseout(21);" onmouseover="TMA[0].onmouseover(21);" onmousedown="TMA[0].onmousedown(21);"><div id="e0_21i" class="TM0i0">Network</div></a>
+<a id="e0_22o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Printing" target="_top" style="position: absolute; top: 306px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(22);" onmouseout="TMA[0].onmouseout(22);" onmouseover="TMA[0].onmouseover(22);" onmousedown="TMA[0].onmousedown(22);"><div id="e0_22i" class="TM0i0">Printing</div></a>
+<a id="e0_23o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Proc" target="_top" style="position: absolute; top: 330px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(23);" onmouseout="TMA[0].onmouseout(23);" onmouseover="TMA[0].onmouseover(23);" onmousedown="TMA[0].onmousedown(23);"><div id="e0_23i" class="TM0i0">Processes &amp; Services</div></a>
+<a id="e0_24o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Flow" target="_top" style="position: absolute; top: 354px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(24);" onmouseout="TMA[0].onmouseout(24);" onmouseover="TMA[0].onmouseover(24);" onmousedown="TMA[0].onmousedown(24);"><div id="e0_24i" class="TM0i0">Program Flow</div></a>
+<a id="e0_25o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Registry" target="_top" style="position: absolute; top: 378px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(25);" onmouseout="TMA[0].onmouseout(25);" onmouseover="TMA[0].onmouseover(25);" onmousedown="TMA[0].onmousedown(25);"><div id="e0_25i" class="TM0i0">Registry</div></a>
+<a id="e0_26o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Examples" target="_top" style="position: absolute; top: 402px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(26);" onmouseout="TMA[0].onmouseout(26);" onmouseover="TMA[0].onmouseover(26);" onmousedown="TMA[0].onmousedown(26);"><div id="e0_26i" class="TM0i0">Samples Collections</div></a>
+<a id="e0_27o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Schedulers" target="_top" style="position: absolute; top: 426px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(27);" onmouseout="TMA[0].onmouseout(27);" onmouseover="TMA[0].onmouseover(27);" onmousedown="TMA[0].onmousedown(27);"><div id="e0_27i" class="TM0i0">Schedulers</div></a>
+<a id="e0_28o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Security" target="_top" style="position: absolute; top: 450px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(28);" onmouseout="TMA[0].onmouseout(28);" onmouseover="TMA[0].onmouseover(28);" onmousedown="TMA[0].onmousedown(28);"><div id="e0_28i" class="TM0i0">Security</div></a>
+<a id="e0_29o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Time" target="_top" style="position: absolute; top: 474px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(29);" onmouseout="TMA[0].onmouseout(29);" onmouseover="TMA[0].onmouseover(29);" onmousedown="TMA[0].onmousedown(29);"><div id="e0_29i" class="TM0i0">Time &amp; Date</div></a>
+<a id="e0_30o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#UnixPorts" target="_top" style="position: absolute; top: 498px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(30);" onmouseout="TMA[0].onmouseout(30);" onmouseover="TMA[0].onmouseover(30);" onmousedown="TMA[0].onmousedown(30);"><div id="e0_30i" class="TM0i0">UNIX Ports</div></a>
+<a id="e0_31o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#UI" target="_top" style="position: absolute; top: 522px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(31);" onmouseout="TMA[0].onmouseout(31);" onmouseover="TMA[0].onmouseover(31);" onmousedown="TMA[0].onmousedown(31);"><div id="e0_31i" class="TM0i0">User Interaction</div></a>
+<a id="e0_32o" class="TM0o0" href="http://www.robvanderwoude.com/batchhowto.php" target="_top" style="position: absolute; top: 86px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(32);" onmouseout="TMA[0].onmouseout(32);" onmouseover="TMA[0].onmouseover(32);" onmousedown="TMA[0].onmousedown(32);"><div id="e0_32i" class="TM0i0">Batch HowTos</div></a>
+<a id="e0_33o" class="TM0o0" href="http://www.robvanderwoude.com/batchcommands.php" target="_top" style="position: absolute; top: 110px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(33);" onmouseout="TMA[0].onmouseout(33);" onmouseover="TMA[0].onmouseover(33);" onmousedown="TMA[0].onmousedown(33);"><div id="e0_33i" class="TM0i0">Commands</div></a>
+<a id="e0_34o" class="TM0o0" href="http://www.robvanderwoude.com/commandlineswitches.php" target="_top" style="position: absolute; top: 134px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(34);" onmouseout="TMA[0].onmouseout(34);" onmouseover="TMA[0].onmouseover(34);" onmousedown="TMA[0].onmousedown(34);"><div id="e0_34i" class="TM0i0">Command Line Switches</div></a>
+<a id="e0_35o" class="TM0o0" href="http://www.robvanderwoude.com/shutdown.php" target="_top" style="position: absolute; top: 158px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(35);" onmouseout="TMA[0].onmouseout(35);" onmouseover="TMA[0].onmouseover(35);" onmousedown="TMA[0].onmousedown(35);"><div id="e0_35i" class="TM0i0">Shutdown Commands</div></a>
+<a id="e0_36o" class="TM0o0" href="http://www.robvanderwoude.com/shorts.php" target="_top" style="position: absolute; top: 182px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(36);" onmouseout="TMA[0].onmouseout(36);" onmouseover="TMA[0].onmouseover(36);" onmousedown="TMA[0].onmousedown(36);"><div id="e0_36i" class="TM0i0">Short Command Line Tips</div></a>
+<a id="e0_37o" class="TM0o0" href="http://www.robvanderwoude.com/ntadmincommands.php" target="_top" style="position: absolute; top: 206px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(37);" onmouseout="TMA[0].onmouseout(37);" onmouseover="TMA[0].onmouseover(37);" onmousedown="TMA[0].onmousedown(37);"><div id="e0_37i" class="TM0i0">Admin One-Liners</div></a>
+<a id="e0_38o" class="TM0o0" href="http://www.robvanderwoude.com/batexamples.php" target="_top" style="position: absolute; top: 230px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(38);" onmouseout="TMA[0].onmouseout(38);" onmouseover="TMA[0].onmouseover(38);" onmousedown="TMA[0].onmousedown(38);"><div id="e0_38i" class="TM0i0">Examples</div></a>
+<a id="e0_39o" class="TM0o0" href="http://www.robvanderwoude.com/battech.php#Examples" target="_top" style="position: absolute; top: 254px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(39);" onmouseout="TMA[0].onmouseout(39);" onmouseover="TMA[0].onmouseover(39);" onmousedown="TMA[0].onmousedown(39);"><div id="e0_39i" class="TM0i0">Samples Collections</div></a>
+<a id="e0_40o" class="TM0o0" href="http://www.robvanderwoude.com/batchtools.php" target="_top" style="position: absolute; top: 278px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(40);" onmouseout="TMA[0].onmouseout(40);" onmouseover="TMA[0].onmouseover(40);" onmousedown="TMA[0].onmousedown(40);"><div id="e0_40i" class="TM0i0">Tools</div></a>
+<a id="e0_41o" class="TM0o0" href="http://www.robvanderwoude.com/batlinks.php" target="_top" style="position: absolute; top: 302px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(41);" onmouseout="TMA[0].onmouseout(41);" onmouseover="TMA[0].onmouseover(41);" onmousedown="TMA[0].onmousedown(41);"><div id="e0_41i" class="TM0i0">Links</div></a>
+<a id="e0_42o" class="TM0o0" href="http://www.robvanderwoude.com/booksbat.php" target="_top" style="position: absolute; top: 326px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(42);" onmouseout="TMA[0].onmouseout(42);" onmouseover="TMA[0].onmouseover(42);" onmousedown="TMA[0].onmousedown(42);"><div id="e0_42i" class="TM0i0">Books</div></a>
+<a id="e0_43o" class="TM0o0" href="http://www.robvanderwoude.com/challenges.php" target="_top" style="position: absolute; top: 350px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(43);" onmouseout="TMA[0].onmouseout(43);" onmouseover="TMA[0].onmouseover(43);" onmousedown="TMA[0].onmousedown(43);"><div id="e0_43i" class="TM0i0">Challenges</div></a>
+<a id="e0_44o" class="TM0o0" href="http://www.robvanderwoude.com/csharpstart.php" target="_top" style="position: absolute; top: 58px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(44);" onmouseout="TMA[0].onmouseout(44);" onmouseover="TMA[0].onmouseover(44);" onmousedown="TMA[0].onmousedown(44);"><div id="e0_44i" class="TM0i0">C#</div></a>
+<a id="e0_45o" class="TM0o0" href="http://www.robvanderwoude.com/csharpstart.php" target="_top" style="position: absolute; top: 62px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(45);" onmouseout="TMA[0].onmouseout(45);" onmouseover="TMA[0].onmouseover(45);" onmousedown="TMA[0].onmousedown(45);"><div id="e0_45i" class="TM0i0">Getting Started</div></a>
+<a id="e0_46o" class="TM0o0" href="http://www.robvanderwoude.com/csharpexamples.php" target="_top" style="position: absolute; top: 86px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(46);" onmouseout="TMA[0].onmouseout(46);" onmouseover="TMA[0].onmouseover(46);" onmousedown="TMA[0].onmousedown(46);"><div id="e0_46i" class="TM0i0">Examples</div></a>
+<a id="e0_47o" class="TM0o0" href="http://www.robvanderwoude.com/bookscs.php" target="_top" style="position: absolute; top: 110px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(47);" onmouseout="TMA[0].onmouseout(47);" onmouseover="TMA[0].onmouseover(47);" onmousedown="TMA[0].onmousedown(47);"><div id="e0_47i" class="TM0i0">Books</div></a>
+<a id="e0_48o" class="TM0o0" href="http://www.robvanderwoude.com/storevisualstudio.php" target="_top" style="position: absolute; top: 134px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(48);" onmouseout="TMA[0].onmouseout(48);" onmouseover="TMA[0].onmouseover(48);" onmousedown="TMA[0].onmousedown(48);"><div id="e0_48i" class="TM0i0">Development Software</div></a>
+<a id="e0_49o" class="TM0o0" href="http://www.robvanderwoude.com/kixtart.php" target="_top" style="position: absolute; top: 82px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(49);" onmouseout="TMA[0].onmouseout(49);" onmouseover="TMA[0].onmouseover(49);" onmousedown="TMA[0].onmousedown(49);"><div id="e0_49i" class="TM0i0">KiXtart</div></a>
+<a id="e0_50o" class="TM0o0" href="http://www.robvanderwoude.com/kixtartstart.php" target="_top" style="position: absolute; top: 86px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(50);" onmouseout="TMA[0].onmouseout(50);" onmouseover="TMA[0].onmouseover(50);" onmousedown="TMA[0].onmousedown(50);"><div id="e0_50i" class="TM0i0">Getting Started</div></a>
+<a id="e0_51o" class="TM0o0" href="http://www.robvanderwoude.com/kixtartexamples.php" target="_top" style="position: absolute; top: 110px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(51);" onmouseout="TMA[0].onmouseout(51);" onmouseover="TMA[0].onmouseover(51);" onmousedown="TMA[0].onmousedown(51);"><div id="e0_51i" class="TM0i0">Examples</div></a>
+<a id="e0_52o" class="TM0o0" href="http://www.robvanderwoude.com/kixtartlinks.php" target="_top" style="position: absolute; top: 134px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(52);" onmouseout="TMA[0].onmouseout(52);" onmouseover="TMA[0].onmouseover(52);" onmousedown="TMA[0].onmousedown(52);"><div id="e0_52i" class="TM0i0">Links</div></a>
+<a id="e0_53o" class="TM0o0" href="http://www.robvanderwoude.com/kixtarttools.php" target="_top" style="position: absolute; top: 158px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(53);" onmouseout="TMA[0].onmouseout(53);" onmouseover="TMA[0].onmouseover(53);" onmousedown="TMA[0].onmousedown(53);"><div id="e0_53i" class="TM0i0">Tools</div></a>
+<a id="e0_54o" class="TM0o0" href="http://www.robvanderwoude.com/bookskix.php" target="_top" style="position: absolute; top: 182px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(54);" onmouseout="TMA[0].onmouseout(54);" onmouseover="TMA[0].onmouseover(54);" onmousedown="TMA[0].onmousedown(54);"><div id="e0_54i" class="TM0i0">Books</div></a>
+<a id="e0_55o" class="TM0o0" href="http://www.robvanderwoude.com/perl.php" target="_top" style="position: absolute; top: 106px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(55);" onmouseout="TMA[0].onmouseout(55);" onmouseover="TMA[0].onmouseover(55);" onmousedown="TMA[0].onmousedown(55);"><div id="e0_55i" class="TM0i0">Perl</div></a>
+<a id="e0_56o" class="TM0o0" href="http://www.robvanderwoude.com/perlstart.php" target="_top" style="position: absolute; top: 110px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(56);" onmouseout="TMA[0].onmouseout(56);" onmouseover="TMA[0].onmouseover(56);" onmousedown="TMA[0].onmousedown(56);"><div id="e0_56i" class="TM0i0">Getting Started</div></a>
+<a id="e0_57o" class="TM0o0" href="http://www.robvanderwoude.com/perlexamples.php" target="_top" style="position: absolute; top: 134px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(57);" onmouseout="TMA[0].onmouseout(57);" onmouseover="TMA[0].onmouseover(57);" onmousedown="TMA[0].onmousedown(57);"><div id="e0_57i" class="TM0i0">Examples</div></a>
+<a id="e0_58o" class="TM0o0" href="http://www.robvanderwoude.com/perllinks.php" target="_top" style="position: absolute; top: 158px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(58);" onmouseout="TMA[0].onmouseout(58);" onmouseover="TMA[0].onmouseover(58);" onmousedown="TMA[0].onmousedown(58);"><div id="e0_58i" class="TM0i0">Links</div></a>
+<a id="e0_59o" class="TM0o0" href="http://www.robvanderwoude.com/perltools.php" target="_top" style="position: absolute; top: 182px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(59);" onmouseout="TMA[0].onmouseout(59);" onmouseover="TMA[0].onmouseover(59);" onmousedown="TMA[0].onmousedown(59);"><div id="e0_59i" class="TM0i0">Tools</div></a>
+<a id="e0_60o" class="TM0o0" href="http://www.robvanderwoude.com/booksperl.php" target="_top" style="position: absolute; top: 206px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(60);" onmouseout="TMA[0].onmouseout(60);" onmouseover="TMA[0].onmouseover(60);" onmousedown="TMA[0].onmousedown(60);"><div id="e0_60i" class="TM0i0">Books</div></a>
+<a id="e0_61o" class="TM0o0" href="http://www.robvanderwoude.com/powershellstart.php" target="_top" style="position: absolute; top: 130px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(61);" onmouseout="TMA[0].onmouseout(61);" onmouseover="TMA[0].onmouseover(61);" onmousedown="TMA[0].onmousedown(61);"><div id="e0_61i" class="TM0i0">PowerShell</div></a>
+<a id="e0_62o" class="TM0o0" href="http://www.robvanderwoude.com/powershellstart.php" target="_top" style="position: absolute; top: 134px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(62);" onmouseout="TMA[0].onmouseout(62);" onmouseover="TMA[0].onmouseover(62);" onmousedown="TMA[0].onmousedown(62);"><div id="e0_62i" class="TM0i0">Getting Started</div></a>
+<a id="e0_63o" class="TM0o0" href="http://www.robvanderwoude.com/powershellexamples.php" target="_top" style="position: absolute; top: 158px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(63);" onmouseout="TMA[0].onmouseout(63);" onmouseover="TMA[0].onmouseover(63);" onmousedown="TMA[0].onmousedown(63);"><div id="e0_63i" class="TM0i0">Examples</div></a>
+<a id="e0_64o" class="TM0o0" href="http://www.robvanderwoude.com/powershelllinks.php" target="_top" style="position: absolute; top: 182px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(64);" onmouseout="TMA[0].onmouseout(64);" onmouseover="TMA[0].onmouseover(64);" onmousedown="TMA[0].onmousedown(64);"><div id="e0_64i" class="TM0i0">Links</div></a>
+<a id="e0_65o" class="TM0o0" href="http://www.robvanderwoude.com/powershelltools.php" target="_top" style="position: absolute; top: 206px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(65);" onmouseout="TMA[0].onmouseout(65);" onmouseover="TMA[0].onmouseover(65);" onmousedown="TMA[0].onmousedown(65);"><div id="e0_65i" class="TM0i0">Tools</div></a>
+<a id="e0_66o" class="TM0o0" href="http://www.robvanderwoude.com/booksps.php" target="_top" style="position: absolute; top: 230px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(66);" onmouseout="TMA[0].onmouseout(66);" onmouseover="TMA[0].onmouseover(66);" onmousedown="TMA[0].onmousedown(66);"><div id="e0_66i" class="TM0i0">Books</div></a>
+<a id="e0_67o" class="TM0o0" href="http://www.robvanderwoude.com/regexp.php" target="_top" style="position: absolute; top: 154px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(67);" onmouseout="TMA[0].onmouseout(67);" onmouseover="TMA[0].onmouseover(67);" onmousedown="TMA[0].onmousedown(67);"><div id="e0_67i" class="TM0i0">Regular Expressions</div></a>
+<a id="e0_68o" class="TM0o0" href="http://www.robvanderwoude.com/regexpstart.php" target="_top" style="position: absolute; top: 158px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(68);" onmouseout="TMA[0].onmouseout(68);" onmouseover="TMA[0].onmouseover(68);" onmousedown="TMA[0].onmousedown(68);"><div id="e0_68i" class="TM0i0">Getting Started</div></a>
+<a id="e0_69o" class="TM0o0" href="http://www.robvanderwoude.com/regexpexp.php" target="_top" style="position: absolute; top: 182px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(69);" onmouseout="TMA[0].onmouseout(69);" onmouseover="TMA[0].onmouseover(69);" onmousedown="TMA[0].onmousedown(69);"><div id="e0_69i" class="TM0i0">Expressions</div></a>
+<a id="e0_70o" class="TM0o0" href="http://www.robvanderwoude.com/regexpexamples.php" target="_top" style="position: absolute; top: 206px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(70);" onmouseout="TMA[0].onmouseout(70);" onmouseover="TMA[0].onmouseover(70);" onmousedown="TMA[0].onmousedown(70);"><div id="e0_70i" class="TM0i0">Examples</div></a>
+<a id="e0_71o" class="TM0o0" href="http://www.robvanderwoude.com/regexplinks.php" target="_top" style="position: absolute; top: 230px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(71);" onmouseout="TMA[0].onmouseout(71);" onmouseover="TMA[0].onmouseover(71);" onmousedown="TMA[0].onmousedown(71);"><div id="e0_71i" class="TM0i0">Links</div></a>
+<a id="e0_72o" class="TM0o0" href="http://www.robvanderwoude.com/regexptools.php" target="_top" style="position: absolute; top: 254px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(72);" onmouseout="TMA[0].onmouseout(72);" onmouseover="TMA[0].onmouseover(72);" onmousedown="TMA[0].onmousedown(72);"><div id="e0_72i" class="TM0i0">Tools</div></a>
+<a id="e0_73o" class="TM0o0" href="http://www.robvanderwoude.com/booksregexp.php" target="_top" style="position: absolute; top: 278px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(73);" onmouseout="TMA[0].onmouseout(73);" onmouseover="TMA[0].onmouseover(73);" onmousedown="TMA[0].onmousedown(73);"><div id="e0_73i" class="TM0i0">Books</div></a>
+<a id="e0_74o" class="TM0o0" href="http://www.robvanderwoude.com/rexx.php" target="_top" style="position: absolute; top: 178px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(74);" onmouseout="TMA[0].onmouseout(74);" onmouseover="TMA[0].onmouseover(74);" onmousedown="TMA[0].onmousedown(74);"><div id="e0_74i" class="TM0i0">Rexx</div></a>
+<a id="e0_75o" class="TM0o0" href="http://www.robvanderwoude.com/rexxstart.php" target="_top" style="position: absolute; top: 182px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(75);" onmouseout="TMA[0].onmouseout(75);" onmouseover="TMA[0].onmouseover(75);" onmousedown="TMA[0].onmousedown(75);"><div id="e0_75i" class="TM0i0">Getting Started</div></a>
+<a id="e0_76o" class="TM0o0" href="http://www.robvanderwoude.com/rexxexamples.php" target="_top" style="position: absolute; top: 206px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(76);" onmouseout="TMA[0].onmouseout(76);" onmouseover="TMA[0].onmouseover(76);" onmousedown="TMA[0].onmousedown(76);"><div id="e0_76i" class="TM0i0">Examples</div></a>
+<a id="e0_77o" class="TM0o0" href="http://www.robvanderwoude.com/lsrexxutil.php" target="_top" style="position: absolute; top: 230px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(77);" onmouseout="TMA[0].onmouseout(77);" onmouseover="TMA[0].onmouseover(77);" onmousedown="TMA[0].onmousedown(77);"><div id="e0_77i" class="TM0i0">OS/2 LAN Server</div></a>
+<a id="e0_78o" class="TM0o0" href="http://www.robvanderwoude.com/rexxlinks.php" target="_top" style="position: absolute; top: 254px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(78);" onmouseout="TMA[0].onmouseout(78);" onmouseover="TMA[0].onmouseover(78);" onmousedown="TMA[0].onmousedown(78);"><div id="e0_78i" class="TM0i0">Links</div></a>
+<a id="e0_79o" class="TM0o0" href="http://www.robvanderwoude.com/rexxtools.php" target="_top" style="position: absolute; top: 278px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(79);" onmouseout="TMA[0].onmouseout(79);" onmouseover="TMA[0].onmouseover(79);" onmousedown="TMA[0].onmousedown(79);"><div id="e0_79i" class="TM0i0">Tools</div></a>
+<a id="e0_80o" class="TM0o0" href="http://www.robvanderwoude.com/booksrexx.php" target="_top" style="position: absolute; top: 302px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(80);" onmouseout="TMA[0].onmouseout(80);" onmouseover="TMA[0].onmouseover(80);" onmousedown="TMA[0].onmousedown(80);"><div id="e0_80i" class="TM0i0">Books</div></a>
+<a id="e0_81o" class="TM0o0" href="http://www.robvanderwoude.com/wsh.php" target="_top" style="position: absolute; top: 202px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(81);" onmouseout="TMA[0].onmouseout(81);" onmouseover="TMA[0].onmouseover(81);" onmousedown="TMA[0].onmousedown(81);"><div id="e0_81i" class="TM0i0">VBScript &amp; WSH</div></a>
+<a id="e0_82o" class="TM0o0" href="http://www.robvanderwoude.com/wshstart.php" target="_top" style="position: absolute; top: 206px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(82);" onmouseout="TMA[0].onmouseout(82);" onmouseover="TMA[0].onmouseover(82);" onmousedown="TMA[0].onmousedown(82);"><div id="e0_82i" class="TM0i0">Getting Started</div></a>
+<a id="e0_83o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php" target="_top" style="position: absolute; top: 230px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(83);" onmouseout="TMA[0].onmouseout(83);" onmouseover="TMA[0].onmouseover(83);" onmousedown="TMA[0].onmousedown(83);"><div id="e0_83i" class="TM0i0">VBScript Techniques</div></a>
+<a id="e0_84o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech_debugging.php" target="_top" style="position: absolute; top: 234px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(84);" onmouseout="TMA[0].onmouseout(84);" onmouseover="TMA[0].onmouseover(84);" onmousedown="TMA[0].onmousedown(84);"><div id="e0_84i" class="TM0i0">Debugging</div></a>
+<a id="e0_85o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Data" target="_top" style="position: absolute; top: 258px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(85);" onmouseout="TMA[0].onmouseout(85);" onmouseover="TMA[0].onmouseover(85);" onmousedown="TMA[0].onmousedown(85);"><div id="e0_85i" class="TM0i0">Data &amp; Variables</div></a>
+<a id="e0_86o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Databases" target="_top" style="position: absolute; top: 282px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(86);" onmouseout="TMA[0].onmouseout(86);" onmouseover="TMA[0].onmouseover(86);" onmousedown="TMA[0].onmousedown(86);"><div id="e0_86i" class="TM0i0">Databases</div></a>
+<a id="e0_87o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Engines" target="_top" style="position: absolute; top: 306px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(87);" onmouseout="TMA[0].onmouseout(87);" onmouseover="TMA[0].onmouseover(87);" onmousedown="TMA[0].onmousedown(87);"><div id="e0_87i" class="TM0i0">Engines</div></a>
+<a id="e0_88o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Files" target="_top" style="position: absolute; top: 330px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(88);" onmouseout="TMA[0].onmouseout(88);" onmouseover="TMA[0].onmouseover(88);" onmousedown="TMA[0].onmousedown(88);"><div id="e0_88i" class="TM0i0">Files</div></a>
+<a id="e0_89o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Folders" target="_top" style="position: absolute; top: 354px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(89);" onmouseout="TMA[0].onmouseout(89);" onmouseover="TMA[0].onmouseover(89);" onmousedown="TMA[0].onmousedown(89);"><div id="e0_89i" class="TM0i0">Folders</div></a>
+<a id="e0_90o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Internet" target="_top" style="position: absolute; top: 378px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(90);" onmouseout="TMA[0].onmouseout(90);" onmouseover="TMA[0].onmouseover(90);" onmousedown="TMA[0].onmousedown(90);"><div id="e0_90i" class="TM0i0">Internet</div></a>
+<a id="e0_91o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Inventory" target="_top" style="position: absolute; top: 402px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(91);" onmouseout="TMA[0].onmouseout(91);" onmouseover="TMA[0].onmouseover(91);" onmousedown="TMA[0].onmousedown(91);"><div id="e0_91i" class="TM0i0">Inventory</div></a>
+<a id="e0_92o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#MultiMedia" target="_top" style="position: absolute; top: 426px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(92);" onmouseout="TMA[0].onmouseout(92);" onmouseover="TMA[0].onmouseover(92);" onmousedown="TMA[0].onmousedown(92);"><div id="e0_92i" class="TM0i0">Multimedia</div></a>
+<a id="e0_93o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Network" target="_top" style="position: absolute; top: 450px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(93);" onmouseout="TMA[0].onmouseout(93);" onmouseover="TMA[0].onmouseover(93);" onmousedown="TMA[0].onmousedown(93);"><div id="e0_93i" class="TM0i0">Network</div></a>
+<a id="e0_94o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#ObjectBrowsers" target="_top" style="position: absolute; top: 474px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(94);" onmouseout="TMA[0].onmouseout(94);" onmouseover="TMA[0].onmouseover(94);" onmousedown="TMA[0].onmousedown(94);"><div id="e0_94i" class="TM0i0">Object Browsers</div></a>
+<a id="e0_95o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Automation" target="_top" style="position: absolute; top: 498px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(95);" onmouseout="TMA[0].onmouseout(95);" onmouseover="TMA[0].onmouseover(95);" onmousedown="TMA[0].onmousedown(95);"><div id="e0_95i" class="TM0i0">OLE Automation</div></a>
+<a id="e0_96o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Printing" target="_top" style="position: absolute; top: 522px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(96);" onmouseout="TMA[0].onmouseout(96);" onmouseover="TMA[0].onmouseover(96);" onmousedown="TMA[0].onmousedown(96);"><div id="e0_96i" class="TM0i0">Printing</div></a>
+<a id="e0_97o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Proc" target="_top" style="position: absolute; top: 546px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(97);" onmouseout="TMA[0].onmouseout(97);" onmouseover="TMA[0].onmouseover(97);" onmousedown="TMA[0].onmousedown(97);"><div id="e0_97i" class="TM0i0">Processes &amp; Services</div></a>
+<a id="e0_98o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Registry" target="_top" style="position: absolute; top: 570px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(98);" onmouseout="TMA[0].onmouseout(98);" onmouseover="TMA[0].onmouseover(98);" onmousedown="TMA[0].onmousedown(98);"><div id="e0_98i" class="TM0i0">Registry</div></a>
+<a id="e0_99o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech_regexp.php" target="_top" style="position: absolute; top: 594px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(99);" onmouseout="TMA[0].onmouseout(99);" onmouseover="TMA[0].onmouseover(99);" onmousedown="TMA[0].onmousedown(99);"><div id="e0_99i" class="TM0i0">Regular Expressions</div></a>
+<a id="e0_100o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Shortcuts" target="_top" style="position: absolute; top: 618px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(100);" onmouseout="TMA[0].onmouseout(100);" onmouseover="TMA[0].onmouseover(100);" onmousedown="TMA[0].onmousedown(100);"><div id="e0_100i" class="TM0i0">Shortcuts</div></a>
+<a id="e0_101o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#Time" target="_top" style="position: absolute; top: 642px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(101);" onmouseout="TMA[0].onmouseout(101);" onmouseover="TMA[0].onmouseover(101);" onmousedown="TMA[0].onmousedown(101);"><div id="e0_101i" class="TM0i0">Time &amp; Date</div></a>
+<a id="e0_102o" class="TM0o0" href="http://www.robvanderwoude.com/vbstech.php#UI" target="_top" style="position: absolute; top: 666px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(102);" onmouseout="TMA[0].onmouseout(102);" onmouseover="TMA[0].onmouseover(102);" onmousedown="TMA[0].onmousedown(102);"><div id="e0_102i" class="TM0i0">User Interaction</div></a>
+<a id="e0_103o" class="TM0o0" href="http://www.robvanderwoude.com/wshexamples.php" target="_top" style="position: absolute; top: 254px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(103);" onmouseout="TMA[0].onmouseout(103);" onmouseover="TMA[0].onmouseover(103);" onmousedown="TMA[0].onmousedown(103);"><div id="e0_103i" class="TM0i0">Examples</div></a>
+<a id="e0_104o" class="TM0o0" href="http://www.robvanderwoude.com/htaexamples.php" target="_top" style="position: absolute; top: 278px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(104);" onmouseout="TMA[0].onmouseout(104);" onmouseover="TMA[0].onmouseover(104);" onmousedown="TMA[0].onmousedown(104);"><div id="e0_104i" class="TM0i0">HTA &amp; WSC Examples</div></a>
+<a id="e0_105o" class="TM0o0" href="http://www.robvanderwoude.com/wshlinks.php" target="_top" style="position: absolute; top: 302px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(105);" onmouseout="TMA[0].onmouseout(105);" onmouseover="TMA[0].onmouseover(105);" onmousedown="TMA[0].onmousedown(105);"><div id="e0_105i" class="TM0i0">Links</div></a>
+<a id="e0_106o" class="TM0o0" href="http://www.robvanderwoude.com/wshtools.php" target="_top" style="position: absolute; top: 326px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(106);" onmouseout="TMA[0].onmouseout(106);" onmouseover="TMA[0].onmouseover(106);" onmousedown="TMA[0].onmousedown(106);"><div id="e0_106i" class="TM0i0">Tools</div></a>
+<a id="e0_107o" class="TM0o0" href="http://www.robvanderwoude.com/bookswsh.php" target="_top" style="position: absolute; top: 350px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(107);" onmouseout="TMA[0].onmouseout(107);" onmouseover="TMA[0].onmouseover(107);" onmousedown="TMA[0].onmousedown(107);"><div id="e0_107i" class="TM0i0">Books</div></a>
+<a id="e0_108o" class="TM0o0" href="http://www.robvanderwoude.com/challenges.php#VBScript" target="_top" style="position: absolute; top: 374px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(108);" onmouseout="TMA[0].onmouseout(108);" onmouseover="TMA[0].onmouseover(108);" onmousedown="TMA[0].onmousedown(108);"><div id="e0_108i" class="TM0i0">Challenges</div></a>
+<a id="e0_109o" class="TM0o0" href="http://www.robvanderwoude.com/wmistart.php" target="_top" style="position: absolute; top: 226px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(109);" onmouseout="TMA[0].onmouseout(109);" onmouseover="TMA[0].onmouseover(109);" onmousedown="TMA[0].onmousedown(109);"><div id="e0_109i" class="TM0i0">WMI</div></a>
+<a id="e0_110o" class="TM0o0" href="http://www.robvanderwoude.com/wmistart.php" target="_top" style="position: absolute; top: 230px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(110);" onmouseout="TMA[0].onmouseout(110);" onmouseover="TMA[0].onmouseover(110);" onmousedown="TMA[0].onmousedown(110);"><div id="e0_110i" class="TM0i0">Getting Started</div></a>
+<a id="e0_111o" class="TM0o0" href="http://www.robvanderwoude.com/wmiexamples.php" target="_top" style="position: absolute; top: 254px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(111);" onmouseout="TMA[0].onmouseout(111);" onmouseover="TMA[0].onmouseover(111);" onmousedown="TMA[0].onmousedown(111);"><div id="e0_111i" class="TM0i0">Examples</div></a>
+<a id="e0_112o" class="TM0o0" href="http://www.robvanderwoude.com/wmilinks.php" target="_top" style="position: absolute; top: 278px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(112);" onmouseout="TMA[0].onmouseout(112);" onmouseover="TMA[0].onmouseover(112);" onmousedown="TMA[0].onmousedown(112);"><div id="e0_112i" class="TM0i0">Links</div></a>
+<a id="e0_113o" class="TM0o0" href="http://www.robvanderwoude.com/bookswmi.php" target="_top" style="position: absolute; top: 302px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(113);" onmouseout="TMA[0].onmouseout(113);" onmouseover="TMA[0].onmouseover(113);" onmousedown="TMA[0].onmousedown(113);"><div id="e0_113i" class="TM0i0">Books</div></a>
+<a id="e0_114o" class="TM0o0" href="http://www.robvanderwoude.com/wmitools.php" target="_top" style="position: absolute; top: 326px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(114);" onmouseout="TMA[0].onmouseout(114);" onmouseover="TMA[0].onmouseover(114);" onmousedown="TMA[0].onmousedown(114);"><div id="e0_114i" class="TM0i0">Tools</div></a>
+<a id="e0_115o" class="TM0o0" href="http://www.robvanderwoude.com/adsistart.php" target="_top" style="position: absolute; top: 250px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(115);" onmouseout="TMA[0].onmouseout(115);" onmouseover="TMA[0].onmouseover(115);" onmousedown="TMA[0].onmousedown(115);"><div id="e0_115i" class="TM0i0">ADSI</div></a>
+<a id="e0_116o" class="TM0o0" href="http://www.robvanderwoude.com/adsistart.php" target="_top" style="position: absolute; top: 254px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(116);" onmouseout="TMA[0].onmouseout(116);" onmouseover="TMA[0].onmouseover(116);" onmousedown="TMA[0].onmousedown(116);"><div id="e0_116i" class="TM0i0">Getting Started</div></a>
+<a id="e0_117o" class="TM0o0" href="http://gallery.technet.microsoft.com/ScriptCenter/en-us/site/search?f[0].Type=RootCategory&amp;f[0].Value=activedirectory&amp;f[0].Text=Active%20Directory" target="_blank" style="position: absolute; top: 278px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(117);" onmouseout="TMA[0].onmouseout(117);" onmouseover="TMA[0].onmouseover(117);" onmousedown="TMA[0].onmousedown(117);"><div id="e0_117i" class="TM0i0">Examples</div></a>
+<a id="e0_118o" class="TM0o0" href="http://www.robvanderwoude.com/adsilinks.php" target="_top" style="position: absolute; top: 302px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(118);" onmouseout="TMA[0].onmouseout(118);" onmouseover="TMA[0].onmouseover(118);" onmousedown="TMA[0].onmousedown(118);"><div id="e0_118i" class="TM0i0">Links</div></a>
+<a id="e0_119o" class="TM0o0" href="http://www.robvanderwoude.com/booksadsi.php" target="_top" style="position: absolute; top: 326px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(119);" onmouseout="TMA[0].onmouseout(119);" onmouseover="TMA[0].onmouseover(119);" onmousedown="TMA[0].onmousedown(119);"><div id="e0_119i" class="TM0i0">Books</div></a>
+<a id="e0_120o" class="TM0o0" href="http://www.robvanderwoude.com/adsitools.php" target="_top" style="position: absolute; top: 350px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(120);" onmouseout="TMA[0].onmouseout(120);" onmouseover="TMA[0].onmouseover(120);" onmousedown="TMA[0].onmousedown(120);"><div id="e0_120i" class="TM0i0">Tools</div></a>
+<a id="e0_121o" class="TM0o0" href="http://www.robvanderwoude.com/unattended.php" target="_top" style="position: absolute; top: 274px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(121);" onmouseout="TMA[0].onmouseout(121);" onmouseover="TMA[0].onmouseover(121);" onmousedown="TMA[0].onmousedown(121);"><div id="e0_121i" class="TM0i0">Silent Installs</div></a>
+<a id="e0_122o" class="TM0o0" href="http://www.robvanderwoude.com/unattended.php" target="_top" style="position: absolute; top: 278px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(122);" onmouseout="TMA[0].onmouseout(122);" onmouseover="TMA[0].onmouseover(122);" onmousedown="TMA[0].onmousedown(122);"><div id="e0_122i" class="TM0i0">General</div></a>
+<a id="e0_123o" class="TM0o0" href="http://www.robvanderwoude.com/msiexec.php" target="_top" style="position: absolute; top: 302px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(123);" onmouseout="TMA[0].onmouseout(123);" onmouseover="TMA[0].onmouseover(123);" onmousedown="TMA[0].onmousedown(123);"><div id="e0_123i" class="TM0i0">Windows Installer</div></a>
+<a id="e0_124o" class="TM0o0" href="http://www.robvanderwoude.com/unattendedapps.php" target="_top" style="position: absolute; top: 326px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(124);" onmouseout="TMA[0].onmouseout(124);" onmouseover="TMA[0].onmouseover(124);" onmousedown="TMA[0].onmousedown(124);"><div id="e0_124i" class="TM0i0">Specific software</div></a>
+<a id="e0_125o" class="TM0o0" href="http://www.robvanderwoude.com/softwarerequirements.php" target="_top" style="position: absolute; top: 350px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(125);" onmouseout="TMA[0].onmouseout(125);" onmouseover="TMA[0].onmouseover(125);" onmousedown="TMA[0].onmousedown(125);"><div id="e0_125i" class="TM0i0">Software requirements</div></a>
+<a id="e0_126o" class="TM0o0" href="http://www.robvanderwoude.com/hardwarerequirements.php" target="_top" style="position: absolute; top: 374px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(126);" onmouseout="TMA[0].onmouseout(126);" onmouseover="TMA[0].onmouseover(126);" onmousedown="TMA[0].onmousedown(126);"><div id="e0_126i" class="TM0i0">Hardware requirements</div></a>
+<a id="e0_127o" class="TM0o0" href="http://www.robvanderwoude.com/books.php" target="_top" style="position: absolute; top: 298px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(127);" onmouseout="TMA[0].onmouseout(127);" onmouseover="TMA[0].onmouseover(127);" onmousedown="TMA[0].onmousedown(127);"><div id="e0_127i" class="TM0i0">Books</div></a>
+<a id="e0_128o" class="TM0o0" href="http://www.robvanderwoude.com/booksbat.php" target="_top" style="position: absolute; top: 302px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(128);" onmouseout="TMA[0].onmouseout(128);" onmouseover="TMA[0].onmouseover(128);" onmousedown="TMA[0].onmousedown(128);"><div id="e0_128i" class="TM0i0">Batch Files</div></a>
+<a id="e0_129o" class="TM0o0" href="http://www.robvanderwoude.com/bookswin.php" target="_top" style="position: absolute; top: 326px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(129);" onmouseout="TMA[0].onmouseout(129);" onmouseover="TMA[0].onmouseover(129);" onmousedown="TMA[0].onmousedown(129);"><div id="e0_129i" class="TM0i0">Windows</div></a>
+<a id="e0_130o" class="TM0o0" href="http://www.robvanderwoude.com/resourcekits.php" target="_top" style="position: absolute; top: 350px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(130);" onmouseout="TMA[0].onmouseout(130);" onmouseover="TMA[0].onmouseover(130);" onmousedown="TMA[0].onmousedown(130);"><div id="e0_130i" class="TM0i0">Resource Kits</div></a>
+<a id="e0_131o" class="TM0o0" href="http://www.robvanderwoude.com/bookskix.php" target="_top" style="position: absolute; top: 374px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(131);" onmouseout="TMA[0].onmouseout(131);" onmouseover="TMA[0].onmouseover(131);" onmousedown="TMA[0].onmousedown(131);"><div id="e0_131i" class="TM0i0">KiXtart</div></a>
+<a id="e0_132o" class="TM0o0" href="http://www.robvanderwoude.com/booksperl.php" target="_top" style="position: absolute; top: 398px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(132);" onmouseout="TMA[0].onmouseout(132);" onmouseover="TMA[0].onmouseover(132);" onmousedown="TMA[0].onmousedown(132);"><div id="e0_132i" class="TM0i0">Perl</div></a>
+<a id="e0_133o" class="TM0o0" href="http://www.robvanderwoude.com/booksps.php" target="_top" style="position: absolute; top: 422px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(133);" onmouseout="TMA[0].onmouseout(133);" onmouseover="TMA[0].onmouseover(133);" onmousedown="TMA[0].onmousedown(133);"><div id="e0_133i" class="TM0i0">PowerShell</div></a>
+<a id="e0_134o" class="TM0o0" href="http://www.robvanderwoude.com/booksregexp.php" target="_top" style="position: absolute; top: 446px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(134);" onmouseout="TMA[0].onmouseout(134);" onmouseover="TMA[0].onmouseover(134);" onmousedown="TMA[0].onmousedown(134);"><div id="e0_134i" class="TM0i0">Regular Expressions</div></a>
+<a id="e0_135o" class="TM0o0" href="http://www.robvanderwoude.com/booksrexx.php" target="_top" style="position: absolute; top: 470px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(135);" onmouseout="TMA[0].onmouseout(135);" onmouseover="TMA[0].onmouseover(135);" onmousedown="TMA[0].onmousedown(135);"><div id="e0_135i" class="TM0i0">Rexx</div></a>
+<a id="e0_136o" class="TM0o0" href="http://www.robvanderwoude.com/bookswsh.php" target="_top" style="position: absolute; top: 494px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(136);" onmouseout="TMA[0].onmouseout(136);" onmouseover="TMA[0].onmouseover(136);" onmousedown="TMA[0].onmousedown(136);"><div id="e0_136i" class="TM0i0">WSH &amp; VBScript</div></a>
+<a id="e0_137o" class="TM0o0" href="http://www.robvanderwoude.com/bookscs.php" target="_top" style="position: absolute; top: 518px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(137);" onmouseout="TMA[0].onmouseout(137);" onmouseover="TMA[0].onmouseover(137);" onmousedown="TMA[0].onmousedown(137);"><div id="e0_137i" class="TM0i0">C#</div></a>
+<a id="e0_138o" class="TM0o0" href="http://www.robvanderwoude.com/bookswmi.php" target="_top" style="position: absolute; top: 542px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(138);" onmouseout="TMA[0].onmouseout(138);" onmouseover="TMA[0].onmouseover(138);" onmousedown="TMA[0].onmousedown(138);"><div id="e0_138i" class="TM0i0">WMI</div></a>
+<a id="e0_139o" class="TM0o0" href="http://www.robvanderwoude.com/booksadsi.php" target="_top" style="position: absolute; top: 566px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(139);" onmouseout="TMA[0].onmouseout(139);" onmouseover="TMA[0].onmouseover(139);" onmousedown="TMA[0].onmousedown(139);"><div id="e0_139i" class="TM0i0">ADSI</div></a>
+<a id="e0_140o" class="TM0o0" href="http://www.robvanderwoude.com/booksweb.php" target="_top" style="position: absolute; top: 590px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(140);" onmouseout="TMA[0].onmouseout(140);" onmouseover="TMA[0].onmouseover(140);" onmousedown="TMA[0].onmousedown(140);"><div id="e0_140i" class="TM0i0">HTML, JavaScript &amp; CSS</div></a>
+<a id="e0_141o" class="TM0o0" href="http://www.robvanderwoude.com/storeofftopic.php" target="_top" style="position: absolute; top: 614px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(141);" onmouseout="TMA[0].onmouseout(141);" onmouseover="TMA[0].onmouseover(141);" onmousedown="TMA[0].onmousedown(141);"><div id="e0_141i" class="TM0i0">Off-Topic</div></a>
+<a id="e0_142o" class="TM0o0" href="http://www.robvanderwoude.com/storeofftopic.php" target="_top" style="position: absolute; top: 618px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(142);" onmouseout="TMA[0].onmouseout(142);" onmouseover="TMA[0].onmouseover(142);" onmousedown="TMA[0].onmousedown(142);"><div id="e0_142i" class="TM0i0">Books and Movies</div></a>
+<a id="e0_143o" class="TM0o0" href="http://www.robvanderwoude.com/storebirding.php" target="_top" style="position: absolute; top: 642px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(143);" onmouseout="TMA[0].onmouseout(143);" onmouseover="TMA[0].onmouseover(143);" onmousedown="TMA[0].onmousedown(143);"><div id="e0_143i" class="TM0i0">Birding and Outdoor</div></a>
+<a id="e0_144o" class="TM0o0" href="http://www.robvanderwoude.com/storephotography.php" target="_top" style="position: absolute; top: 666px; left: 280px; width: 150px; height: 24px; visibility: hidden; z-index: 2;" onclick="return TMA[0].onclick(144);" onmouseout="TMA[0].onmouseout(144);" onmouseover="TMA[0].onmouseover(144);" onmousedown="TMA[0].onmousedown(144);"><div id="e0_144i" class="TM0i0">Photography</div></a>
+<a id="e0_145o" class="TM0o0" href="http://www.robvanderwoude.com/scriptingtools.php" target="_top" style="position: absolute; top: 322px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(145);" onmouseout="TMA[0].onmouseout(145);" onmouseover="TMA[0].onmouseover(145);" onmousedown="TMA[0].onmousedown(145);"><div id="e0_145i" class="TM0i0">Scripting Tools</div></a>
+<a id="e0_146o" class="TM0o0" href="http://www.robvanderwoude.com/batchtools.php" target="_top" style="position: absolute; top: 326px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(146);" onmouseout="TMA[0].onmouseout(146);" onmouseover="TMA[0].onmouseover(146);" onmousedown="TMA[0].onmousedown(146);"><div id="e0_146i" class="TM0i0">Batch Utilities</div></a>
+<a id="e0_147o" class="TM0o0" href="http://www.robvanderwoude.com/resourcekits.php" target="_top" style="position: absolute; top: 350px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(147);" onmouseout="TMA[0].onmouseout(147);" onmouseover="TMA[0].onmouseover(147);" onmousedown="TMA[0].onmousedown(147);"><div id="e0_147i" class="TM0i0">Resource Kits</div></a>
+<a id="e0_148o" class="TM0o0" href="http://www.robvanderwoude.com/scriptcompilers.php" target="_top" style="position: absolute; top: 374px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(148);" onmouseout="TMA[0].onmouseout(148);" onmouseover="TMA[0].onmouseover(148);" onmousedown="TMA[0].onmousedown(148);"><div id="e0_148i" class="TM0i0">Compilers</div></a>
+<a id="e0_149o" class="TM0o0" href="http://www.robvanderwoude.com/scripteditors.php" target="_top" style="position: absolute; top: 398px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(149);" onmouseout="TMA[0].onmouseout(149);" onmouseover="TMA[0].onmouseover(149);" onmousedown="TMA[0].onmousedown(149);"><div id="e0_149i" class="TM0i0">Editors</div></a>
+<a id="e0_150o" class="TM0o0" href="http://www.robvanderwoude.com/codegen.php" target="_top" style="position: absolute; top: 422px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(150);" onmouseout="TMA[0].onmouseout(150);" onmouseover="TMA[0].onmouseover(150);" onmousedown="TMA[0].onmousedown(150);"><div id="e0_150i" class="TM0i0">Code Generators</div></a>
+<a id="e0_151o" class="TM0o0" href="http://www.robvanderwoude.com/regexptools.php" target="_top" style="position: absolute; top: 446px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(151);" onmouseout="TMA[0].onmouseout(151);" onmouseover="TMA[0].onmouseover(151);" onmousedown="TMA[0].onmousedown(151);"><div id="e0_151i" class="TM0i0">Regular Expressions</div></a>
+<a id="e0_152o" class="TM0o0" href="http://www.robvanderwoude.com/automationtools.php" target="_top" style="position: absolute; top: 470px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(152);" onmouseout="TMA[0].onmouseout(152);" onmouseover="TMA[0].onmouseover(152);" onmousedown="TMA[0].onmousedown(152);"><div id="e0_152i" class="TM0i0">Automation Tools</div></a>
+<a id="e0_153o" class="TM0o0" href="http://www.robvanderwoude.com/vbsaddons.php" target="_top" style="position: absolute; top: 494px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(153);" onmouseout="TMA[0].onmouseout(153);" onmouseover="TMA[0].onmouseover(153);" onmousedown="TMA[0].onmousedown(153);"><div id="e0_153i" class="TM0i0">VBScript Add-Ons</div></a>
+<a id="e0_154o" class="TM0o0" href="http://www.robvanderwoude.com/search.php" target="_top" style="position: absolute; top: 518px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(154);" onmouseout="TMA[0].onmouseout(154);" onmouseover="TMA[0].onmouseover(154);" onmousedown="TMA[0].onmousedown(154);"><div id="e0_154i" class="TM0i0">Code Search</div></a>
+<a id="e0_155o" class="TM0o0" href="http://www.robvanderwoude.com/printtools.php" target="_top" style="position: absolute; top: 542px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(155);" onmouseout="TMA[0].onmouseout(155);" onmouseover="TMA[0].onmouseover(155);" onmousedown="TMA[0].onmousedown(155);"><div id="e0_155i" class="TM0i0">Printing Tools</div></a>
+<a id="e0_156o" class="TM0o0" href="http://www.robvanderwoude.com/inventorytools.php" target="_top" style="position: absolute; top: 566px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(156);" onmouseout="TMA[0].onmouseout(156);" onmouseover="TMA[0].onmouseover(156);" onmousedown="TMA[0].onmousedown(156);"><div id="e0_156i" class="TM0i0">Inventory Tools</div></a>
+<a id="e0_157o" class="TM0o0" href="http://www.robvanderwoude.com/shellextensions.php" target="_top" style="position: absolute; top: 590px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(157);" onmouseout="TMA[0].onmouseout(157);" onmouseover="TMA[0].onmouseover(157);" onmousedown="TMA[0].onmousedown(157);"><div id="e0_157i" class="TM0i0">Shell Extensions</div></a>
+<a id="e0_158o" class="TM0o0" href="http://www.robvanderwoude.com/fileviewers.php" target="_top" style="position: absolute; top: 614px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(158);" onmouseout="TMA[0].onmouseout(158);" onmouseover="TMA[0].onmouseover(158);" onmousedown="TMA[0].onmousedown(158);"><div id="e0_158i" class="TM0i0">File viewers</div></a>
+<a id="e0_159o" class="TM0o0" href="http://www.robvanderwoude.com/backuptools.php" target="_top" style="position: absolute; top: 638px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(159);" onmouseout="TMA[0].onmouseout(159);" onmouseover="TMA[0].onmouseover(159);" onmousedown="TMA[0].onmousedown(159);"><div id="e0_159i" class="TM0i0">Backup</div></a>
+<a id="e0_160o" class="TM0o0" href="http://www.robvanderwoude.com/securitytools.php" target="_top" style="position: absolute; top: 662px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(160);" onmouseout="TMA[0].onmouseout(160);" onmouseover="TMA[0].onmouseover(160);" onmousedown="TMA[0].onmousedown(160);"><div id="e0_160i" class="TM0i0">Security</div></a>
+<a id="e0_161o" class="TM0o0" href="http://www.robvanderwoude.com/themakingof.php" target="_top" style="position: absolute; top: 686px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(161);" onmouseout="TMA[0].onmouseout(161);" onmouseover="TMA[0].onmouseover(161);" onmousedown="TMA[0].onmousedown(161);"><div id="e0_161i" class="TM0i0">The Making Of...</div></a>
+<a id="e0_162o" class="TM0o0" href="http://www.robvanderwoude.com/misc.php" target="_top" style="position: absolute; top: 346px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(162);" onmouseout="TMA[0].onmouseout(162);" onmouseover="TMA[0].onmouseover(162);" onmousedown="TMA[0].onmousedown(162);"><div id="e0_162i" class="TM0i0">Miscellaneous</div></a>
+<a id="e0_163o" class="TM0o0" href="http://www.robvanderwoude.com/failedmail.php" target="_top" style="position: absolute; top: 350px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(163);" onmouseout="TMA[0].onmouseout(163);" onmouseover="TMA[0].onmouseover(163);" onmousedown="TMA[0].onmousedown(163);"><div id="e0_163i" class="TM0i0">Failed Mail</div></a>
+<a id="e0_164o" class="TM0o0" href="http://www.robvanderwoude.com/tweaks.php" target="_top" style="position: absolute; top: 374px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(164);" onmouseout="TMA[0].onmouseout(164);" onmouseover="TMA[0].onmouseover(164);" onmousedown="TMA[0].onmousedown(164);"><div id="e0_164i" class="TM0i0">Tweaks</div></a>
+<a id="e0_165o" class="TM0o0" href="http://www.robvanderwoude.com/webpub.php" target="_top" style="position: absolute; top: 398px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(165);" onmouseout="TMA[0].onmouseout(165);" onmouseover="TMA[0].onmouseover(165);" onmousedown="TMA[0].onmousedown(165);"><div id="e0_165i" class="TM0i0">Web Stuff</div></a>
+<a id="e0_166o" class="TM0o0" href="http://www.robvanderwoude.com/convert.php" target="_top" style="position: absolute; top: 422px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(166);" onmouseout="TMA[0].onmouseout(166);" onmouseover="TMA[0].onmouseover(166);" onmousedown="TMA[0].onmousedown(166);"><div id="e0_166i" class="TM0i0">Conversions</div></a>
+<a id="e0_167o" class="TM0o0" href="http://www.robvanderwoude.com/randompage.php" target="_top" style="position: absolute; top: 446px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(167);" onmouseout="TMA[0].onmouseout(167);" onmouseover="TMA[0].onmouseover(167);" onmousedown="TMA[0].onmousedown(167);"><div id="e0_167i" class="TM0i0">Random page</div></a>
+<a id="e0_168o" class="TM0o0" href="http://www.robvanderwoude.net/" target="_new" style="position: absolute; top: 470px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(168);" onmouseout="TMA[0].onmouseout(168);" onmouseover="TMA[0].onmouseover(168);" onmousedown="TMA[0].onmousedown(168);"><div id="e0_168i" class="TM0i0">My Photo Galleries</div></a>
+<a id="e0_169o" class="TM0o0" href="http://www.robvanderwoude.com/whatsnew.php" target="_top" style="position: absolute; top: 494px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(169);" onmouseout="TMA[0].onmouseout(169);" onmouseover="TMA[0].onmouseover(169);" onmousedown="TMA[0].onmousedown(169);"><div id="e0_169i" class="TM0i0">What's New</div></a>
+<a id="e0_170o" class="TM0o0" href="http://www.robvanderwoude.com/donate.php" target="_top" style="position: absolute; top: 518px; left: 130px; width: 150px; height: 24px; visibility: hidden; z-index: 1;" onclick="return TMA[0].onclick(170);" onmouseout="TMA[0].onmouseout(170);" onmouseover="TMA[0].onmouseover(170);" onmousedown="TMA[0].onmousedown(170);"><div id="e0_170i" class="TM0i0">Donate</div></a>
+<a id="e0_171o" class="TM0o0" href="http://www.robvanderwoude.com/search.php" target="_top" style="position: absolute; top: 370px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(171);" onmouseout="TMA[0].onmouseout(171);" onmouseover="TMA[0].onmouseover(171);" onmousedown="TMA[0].onmousedown(171);"><div id="e0_171i" class="TM0i0">Search</div></a>
+<a id="e0_172o" class="TM0o0" href="javascript:print()" target="_top" style="position: absolute; top: 394px; left: 10px; width: 120px; height: 24px; visibility: visible; z-index: 0;" onclick="return TMA[0].onclick(172);" onmouseout="TMA[0].onmouseout(172);" onmouseover="TMA[0].onmouseover(172);" onmousedown="TMA[0].onmousedown(172);"><div id="e0_172i" class="TM0i0"><img src="Batch%20files%20-%20The%20TYPE%20command_files/print.gif" alt="0" border="0" height="20" width="20"> Print This Page</div></a>
+
+
+</div>
+
+
+<!-- ChangeDetection.com id="77m2rsxs9c" -->
+
+<h1>The TYPE command</h1>
+
+<p>TYPE is used mostly to view small ASCII files, like AUTOEXEC.BAT.</p>
+
+<p>But it can als be used to:</p>
+
+<ul>
+	<li><a href="#InUse">View text files that may be in use</a>
+	</li><li><a href="#RemoveLine">Remove a line from a text file</a>
+	</li><li><a href="#ShowSize">Show size of files in use</a>
+	</li><li><a href="#Unicode">Convert Unicode to ASCII vv</a>
+	</li><li><a href="#Linefeed">Convert "solitary" linefeeds to CR/LF pairs</a>
+</li></ul>
+
+<p>&nbsp;</p>
+
+<h2 id="InUse">View text files that may be in use</h2>
+
+<p>TYPE has at least one feature that makes it well suited to perform 
+other tasks than plain text file viewing: it doesn't lock the file it 
+views.<br>
+This makes it an excellent program to view and even copy log files that are locked by another program.<br>
+The viewing will be obvious, here, but how about copying? Take a look at the example:</p>
+
+<pre><code>TYPE logfile.log &gt; logfile.bak</code></pre>
+
+<p>Without the redirection to logfile.bak this would show the contents of logfile.log on screen.<br>
+Because of the redirection, though, these contents will now be stored in logfile.bak.<br>
+That way, the content of logfile.bak will be identical to logfile.log's, though it will have a different timestamp.</p>
+
+<p>This may be useful if you need to copy a text file that may be in use, when <code>COPY</code> may fail.</p>
+
+<p>&nbsp;</p>
+
+<h2 id="RemoveLine">Remove a line from a text file</h2>
+
+<p>This example demonstrates the combined use of TYPE and FIND to remove a line from an ASCII file (<strong>warning: real DOS only</strong>):</p>
+
+<pre><code>TYPE C:\CONFIG.SYS | FIND /V /I "SHARE.EXE" &gt; C:\CONFIG.SYS</code></pre>
+
+<p>Since we use piping of TYPE's standard output to FIND's standard 
+input, the content of CONFIG.SYS is stored in one or more temporary 
+files before FIND's standard output will overwrite CONFIG.SYS again.<br>
+Without piping to FIND's standard input, CONFIG.SYS would be opened by 
+TYPE and at the same time be overwritten by TYPE's standard output.<br>
+This would result in either an error message (if you're lucky) or an empty CONFIG.SYS.</p>
+
+<table>
+<tbody><tr>
+	<td class="Note">Warning:</td>
+	<td valign="top">This trick won't allways work in multi-tasking 
+environments like Windows NT or OS/2! You may find that you end up with 
+an empty file using this trick.<br>
+		Use different source and target file names to be on the safe side.</td>
+</tr>
+</tbody></table>
+
+<p>&nbsp;</p>
+
+<h2 id="ShowSize">Show size of files in use</h2>
+
+<p>I often use TYPE to check a download's progress:<br>
+If you use DIR to display file sizes, files being downloaded seem to have a file size of 0 bytes.<br>
+By using TYPE once to display the contents of the file, next time DIR will show the actual amount of bytes already downloaded.<br>
+This won't hurt the download, since TYPE does in no way lock the file.<br>
+Use TYPE and DIR again to check on download progress:</p>
+
+<pre><code>DIR <em>download_in_progress</em>
+TYPE <em>download_in_progress</em> &gt; NUL
+DIR <em>download_in_progress</em></code></pre>
+
+<p><em>download_in_progress</em> is the name of the file being downloaded.</p>
+
+<p>&nbsp;</p>
+
+<h2 id="Unicode">Convert Unicode to ASCII vv</h2>
+
+<p>In Windows 2000 and later, TYPE offers a simple method to convert Unicode files to ASCII:</p>
+
+<pre><code>TYPE MyUnicode.txt &gt; MyASCII.txt</code></pre>
+
+<p>Or, if "extended" ASCII characters like <code>ë</code> or <code>à</code> may be involved:</p>
+
+<pre class="Code">CHCP 1252
+TYPE <em>unicode.txt</em> &gt; <em>ascii.txt</em></pre>
+
+<p><strong>1252</strong> is the most commonly used codepage for western languages in Windows 2000 and later.<br>
+Use a different code page for other languages.</p>
+
+<p>Until recently, I believed conversion from ASCII to Unicode to be more complicated.<br>
+But then Jacques Bensimon showed me a <em>really</em> simple way:</p>
+
+<pre class="Code">CMD /U /C TYPE <em>ascii.txt</em> &gt; <em>unicode.txt</em></pre>
+
+<p>A note from Jacques Bensimon:</p>
+
+<blockquote>
+<p>I thought I'd point out that, although the technique I mentioned does
+ correctly convert ANSI characters to Unicode, the resulting file (which
+ is exactly twice the size of the original) does <em>not</em> comply perfectly with what appears to be the standard for a Unicode text file (at least as far as Windows is concerned):
+a file saved as Unicode by Windows (e.g. Notepad) has the 2-byte header <code>0xFF&nbsp;0xFE</code>
+ as its first two characters and I've noticed that some programs that 
+expect a Unicode file (for example a custom dictionary file in Office 
+2007) will not accept a "bare" Unicode file without that header.</p>
+
+<p>An easy way to take care of this (when necessary) is to first create 
+and keep somewhere an empty Unicode text file (let's call it 
+UniHeader.txt) consisting <em>only</em> of the two bytes in question (just create an empty text file and save it as Unicode using Notepad to achieve this).<br>
+From then on, when you want to convert an ANSI text file to a "true" Unicode text file, you can use the following two commands:</p>
+
+<p><code>COPY /Y UniHeader.txt Unicode_Output.txt<br>
+CMD /U /C Type ANSI_Input.txt &gt;&gt; Unicode_Output.txt</code></p>
+
+<p>Just a variation on the original theme, but this creates an output file the size of which is twice the original size +&nbsp;2.</p>
+</blockquote>
+
+<p>Personally, I prefer a "self-contained" batch file that doesn't need a helper file, so I slightly modified Jacques' idea:</p>
+
+<pre class="Code">&gt; Unicode_Output.txt ECHO.&#9612;&#9632;
+CMD /U /C Type ANSI_Input.txt &gt;&gt; Unicode_Output.txt</pre>
+
+<p>Note the <code>&#9612;&#9632;</code> at the end of the first command line: these represent the 2 characters Jacques mentioned.<br>
+<strong>They are not the actual characters, as these cannot be displayed on a web page: see <a href="#Note2">Note 2</a>!</strong><br>
+Not every editor will allow the insertion of the 2 required characters, but any <a href="http://www.robvanderwoude.com/scripteditors.php">dedicated programming/scripting editor</a> will.</p>
+
+<p>Too bad this solution adds an extra carriage return/linefeed.</p>
+
+<p>Jacques came with a solution once again:</p>
+
+<blockquote>
+<p>If a non-native Windows utility is allowed, <a href="http://www.robvanderwoude.com/batchtools.php#echo">echo.exe</a>
+ (a port of the Unix version of echo) can echo arbitrary characters 
+(specified as octal values) and can optionally not output any trailing 
+newline characters (-n switch), so you can use:</p>
+
+<p><code>echo.exe -n \377\376&gt; Unicode_Output.txt</code></p>
+
+<p>The ".exe" is necessary (unless you rename the utility) to avoid conflict with the internal <code>ECHO</code> command.<br>
+You can use the parameter "-- help" to see the full echo.exe syntax.</p>
+</blockquote>
+
+<p>Or, if you still have a copy of <a href="http://www.robvanderwoude.com/downloads/batchman.zip">BATCHMAN</a> available somewhere, you may want to try its <code>CECHO&nbsp;C</code> command:</p>
+
+<pre class="Code">BATCHMAN CECHO C 07, &#9612;&#9632;&gt; Unicode_Output.txt
+CMD /U /C Type ANSI_Input.txt &gt;&gt; Unicode_Output.txt</pre>
+
+<p>Or use the "almost native" <a href="http://www.robvanderwoude.com/choice.php">CHOICE</a> command (alternative solution, also by Jacques Bensimon):</p>
+
+<pre class="Code">CHOICE /N /M &#9612;&#9632; &lt; NUL 2&gt; NUL &gt; Unicode_Output.txt</pre>
+
+<p>Keep in mind, though, that CHOICE will insert an extra space.</p>
+
+<p>Thanks Jacques</p>
+
+<table>
+<tbody><tr>
+	<td class="Note" id="CarlosM">Update:</td>
+	<td></td>
+	<td>Carlos M. solved the Unicode header problem brilliantly:<br>
+		<br>
+		<code class="Nowrap">CHCP 1252 &gt;NUL<br>
+		CMD.EXE /D /A /C (SET/P=&#9612;&#9632;)&lt;NUL &gt; <em>unicode_file</em> 2&gt;NUL<br>
+		CMD.EXE /D /U /C TYPE <em>ascii_file</em> &gt;&gt; <em>unicode_file</em></code><br>
+		<br>
+		Without <code class="Nowrap">CHCP 1252</code>, the <code class="Nowrap">SET /P</code> command would ignore the first character of the header (0xFF), that is where earlier attempts to use <code class="Nowrap">SET /P</code> failed.<br>
+		<br> 
+		View and download his <a href="http://www.robvanderwoude.com/batexamples.php?fc=A#A2U">A2U.bat</a> for more details.<br> 
+		<br> 
+		Thanks Carlos</td>
+</tr>
+<tr id="Note1">
+	<td class="Note">Notes:</td>
+	<td class="Note">(1)</td>
+	<td>To save and restore the original codepage, use this command <em>before</em> changing the codepage:<br>
+		<br>
+		<code class="Nowrap">FOR /F "tokens=*" %%A IN ('CHCP') DO FOR %%B IN (%%~A) DO SET CodePage=%%B</code><br>
+		<br>
+		or in case your Windows version appends a dot at the end of <code>CHCP</code>'s output (e.g. German Windows 7 and XP versions):<br>
+		<br>
+		<code class="Nowrap">FOR /F "tokens=2 delims=:." %%A IN ('CHCP') DO SET /A CodePage=%%A</code><br>
+		<br>
+		and then use the following command to restore the original codepage afterwards:<br>
+		<br>
+		<code class="Nowrap">CHCP %CodePage%</code></td>
+</tr>
+<tr id="Note2" style="border: 2px solid red;">
+	<td>&nbsp;</td>
+	<td class="Note">(2)</td>
+	<td>Even though TYPE has been successfuly used to convert to ASCII or 
+Unicode on many computers, it has been reported to fail occasionaly.<br>
+		This <em>may</em> be caused by copying the batch code from this web page, instead of downloading the <a href="http://www.robvanderwoude.com/files/ascii2uc.zip">ZIP files containing the code</a>.<br>
+		<br>
+		<em>There is</em> <strong>NO WAY</strong> <em>to correctly display the ASCII characters 0xFF and 0xFE, required for the <a href="http://en.wikipedia.org/wiki/Byte_order_mark">Byte Order Mark</a>, on a web page.<br>
+		The <code>&#9612;&#9632;</code> characters were arbitrarily chosen to</em> <strong>represent</strong> <em>the characters that are actually required.<br>
+		So it is useless to copy and paste the code from this web page, unless you</em> <strong>manually adjust</strong> <em>the 2 characters in the pasted code.<br>
+		Better</em> <a href="http://www.robvanderwoude.com/files/ascii2uc.zip" class="Bold">download</a> <em>the code; that</em> <strong>does</strong> <em>work flawlessly.</em></td>
+</tr>
+<tr id="Note3">
+	<td>&nbsp;</td>
+	<td class="Note">(3)</td>
+	<td>In case you are one of those "lucky" few who still cannot get this working, download and use <a href="http://www.robvanderwoude.com/wshexamples.php?fc=A#ASCII2UC">ASCII2Uc.vbs</a> (or <a href="http://www.robvanderwoude.com/batexamples.php?fc=A#ASCII2Uc">ASCII2Uc.bat</a>) and <a href="http://www.robvanderwoude.com/wshexamples.php?fc=T#Txt2ASCI">Txt2ASCI.vbs</a> instead:<br>
+		<br>
+		<code class="Nowrap">CSCRIPT.EXE //NoLogo TXT2ASCI.VBS <em>unicode.txt ascii.txt</em></code><br>
+		or<br>
+		<code class="Nowrap">CSCRIPT.EXE //NoLogo ASCII2UC.VBS <em>ascii.txt unicode.txt</em></code><br>
+		or<br>
+		<code class="Nowrap">ASCII2UC.BAT <em>ascii.txt unicode.txt</em></code> (for the batch file, the second parameter is optional)</td>
+</tr>
+</tbody></table>
+
+<p>&nbsp;</p>
+
+<h2 id="Linefeed">Convert "solitary" linefeeds to CR/LF pairs</h2>
+
+<p>In Windows NT and later, TYPE combined with MORE offers a convenient 
+way to convert solitary linefeeds (i.e. Unix text files) to carriage 
+return/linefeed pairs:</p>
+
+<pre><code>TYPE <em>input_filename</em> | MORE /E /P &gt; <em>output_filename</em></code></pre>
+		
+<p>&nbsp;</p>
+
+<!-- ChangeDetection.com detection="off" -->
+
+<div class="DontPrint">
+
+<div style="height: 30px"></div>
+
+<hr style="width: 94%; height: 1px; padding: 0; margin-left: 3%">
+
+<table style="width: 100%; padding: 0 20px 0 10px">
+<tbody><tr style="vertical-align: baseline">
+    <td style="width: 50%; text-align: center"><form action="http://www.ChangeDetection.com/detect.html" method="get" style="display: inline" onsubmit="window.open('http://www.ChangeDetection.com/detect.html'); return false;">
+        <p style="display: inline"><!--<input name="enter" value=" Monitor Changes " onclick="window.open('','ChangeDetectionWiz','resizable=yes,scrollbars=yes,width=624,height=460');return true;" type="submit">-->
+        <input name="enter" value=" Monitor Changes " type="submit"></p>
+        </form></td>
+    <td style="width: 50%; text-align: right; font-size: 85%">page last uploaded:
+        23 October 2012, 12:03</td>
+</tr>
+</tbody></table>
+            
+<!-- Menu replacement if JavaScript is disabled -->
+<noscript>
+
+<div class="DontPrint">
+<table class="NoscriptMenu">
+<tr>
+    <td><a href="index.php">Home</a></td>
+</tr>
+<tr>
+    <td><a href="batchfiles.php">Batch Files</a></td>
+</tr>
+<tr>
+    <td><a href="csharpexamples.php">C#</a></td>
+</tr>
+<tr>
+    <td><a href="kixtart.php">KiXtart</a></td>
+</tr>
+<tr>
+    <td><a href="perl.php">Perl</a></td>
+</tr>
+<tr>
+    <td><a href="powershell.php">PowerShell</a></td>
+</tr>
+<tr>
+    <td><a href="regexp.php">Regular Expressions</a></td>
+</tr>
+<tr>
+    <td><a href="rexx.php">Rexx</a></td>
+</tr>
+<tr>
+    <td><a href="wsh.php">VBScript &amp; WSH</a></td>
+</tr>
+<tr>
+    <td><a href="wmistart.php">WMI</a></td>
+</tr>
+<tr>
+    <td><a href="adsistart.php">ADSI</a></td>
+</tr>
+<tr>
+    <td><a href="unattended.php">Silent Installs</a></td>
+</tr>
+<tr>
+    <td><a href="books.php">Books</a></td>
+</tr>
+<tr>
+    <td><a href="scriptingtools.php">Scripting Tools</a></td>
+</tr>
+<tr>
+    <td><a href="misc.php">Miscellaneous</a></td>
+</tr>
+<tr>
+    <td><a href="menu.php">Full Menu</a></td>
+</tr>
+</table>
+</div>
+
+</noscript>
+
+<div style="position: absolute; float: left; top: 480px; left: 12px; width: 125px;">
+<iframe class="jkrcklwuujzfmtsowahv" src="Batch%20files%20-%20The%20TYPE%20command_files/cm.htm" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" height="125" width="125"></iframe>
+</div>
+
+</div>
+
+<!-- ChangeDetection.com detection="off" -->
+
+
+
+
+</body></html>
